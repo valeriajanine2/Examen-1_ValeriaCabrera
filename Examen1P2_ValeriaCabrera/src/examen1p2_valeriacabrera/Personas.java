@@ -20,7 +20,7 @@ public class Personas {
     private String estado;
     private double altura;
     private double peso;
-    private ArrayList<String> mensajes = new ArrayList();
+    private ArrayList<Mensajes> mensajes = new ArrayList();
 
     public Personas() {
     }
@@ -91,11 +91,11 @@ public class Personas {
         this.peso = peso;
     }
 
-    public ArrayList<String> getMensajes() {
+    public ArrayList<Mensajes> getMensajes() {
         return mensajes;
     }
 
-    public void setMensajes(ArrayList<String> mensajes) {
+    public void setMensajes(ArrayList<Mensajes> mensajes) {
         this.mensajes = mensajes;
     }
 
