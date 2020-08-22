@@ -11,7 +11,7 @@ import java.awt.Color;
  *
  * @author Usuario
  */
-public class Articulos {
+public abstract class Articulos {
     
     private String titulo;
     private Color color;
@@ -95,6 +95,5 @@ public class Articulos {
         return "Articulos{" + "titulo=" + titulo + ", color=" + color + ", descripcion=" + descripcion + ", editorial=" + editorial + ", tamano=" + tamano + ", puntuacion=" + puntuacion + ", usuario=" + usuario + '}';
     }
     
-    
-    
+    abstract int num();    
 }

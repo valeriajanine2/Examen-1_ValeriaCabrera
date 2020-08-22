@@ -5,6 +5,8 @@
  */
 package examen1p2_valeriacabrera;
 
+import java.awt.Color;
+
 /**
  *
  * @author Usuario
@@ -12,18 +14,21 @@ package examen1p2_valeriacabrera;
 public class Comic extends Articulos {
     
     private int volumen;
-    private String descripcion;
+    private String desc;
     private int estado;
 
     public Comic() {
         super();
     }
 
-    public Comic(int volumen, String descripcion, int estado) {
+    public Comic(int volumen, String desc, int estado, String titulo, Color color, String descripcion, String editorial, int tamano, int puntuacion, Personas usuario) {
+        super(titulo, color, descripcion, editorial, tamano, puntuacion, usuario);
         this.volumen = volumen;
-        this.descripcion = descripcion;
+        this.desc = desc;
         this.estado = estado;
     }
+
+    
 
     public int getVolumen() {
         return volumen;
@@ -33,12 +38,12 @@ public class Comic extends Articulos {
         this.volumen = volumen;
     }
 
-    public String getDescripcion() {
-        return descripcion;
+    public String getDesc() {
+        return desc;
     }
 
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
+    public void setDesc(String desc) {
+        this.desc = desc;
     }
 
     public int getEstado() {
@@ -51,7 +56,12 @@ public class Comic extends Articulos {
 
     @Override
     public String toString() {
-        return "Comic{" + "volumen=" + volumen + ", descripcion=" + descripcion + ", estado=" + estado + '}';
+        return super.getTitulo();
+    }
+
+    @Override
+    int num() {
+        return volumen;
     }
     
     

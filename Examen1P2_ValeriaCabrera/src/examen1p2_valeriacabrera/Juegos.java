@@ -5,6 +5,8 @@
  */
 package examen1p2_valeriacabrera;
 
+import java.awt.Color;
+
 /**
  *
  * @author Usuario
@@ -15,15 +17,18 @@ public class Juegos extends Articulos{
     private String casa;
     private String pais;
 
-    public Juegos() {
-        super();
-    }
-
-    public Juegos(int edicion, String casa, String pais) {
+    public Juegos(int edicion, String casa, String pais, String titulo, Color color, String descripcion, String editorial, int tamano, int puntuacion, Personas usuario) {
+        super(titulo, color, descripcion, editorial, tamano, puntuacion, usuario);
         this.edicion = edicion;
         this.casa = casa;
         this.pais = pais;
     }
+
+    public Juegos() {
+        super();
+    }
+
+    
 
     public int getEdicion() {
         return edicion;
@@ -51,7 +56,12 @@ public class Juegos extends Articulos{
 
     @Override
     public String toString() {
-        return "Juegos{" + "edicion=" + edicion + ", casa=" + casa + ", pais=" + pais + '}';
+        return super.getTitulo();
+    }
+
+    @Override
+    int num() {
+        return edicion;
     }
     
     

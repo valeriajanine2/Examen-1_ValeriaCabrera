@@ -5,13 +5,15 @@
  */
 package examen1p2_valeriacabrera;
 
+import java.awt.Color;
+
 /**
  *
  * @author Usuario
  */
 public class Figuras extends Articulos {
     
-    private String descripcion;
+    private String desc;
     private String instrucciones;
     private String garantía;
 
@@ -19,18 +21,21 @@ public class Figuras extends Articulos {
         super();
     }
 
-    public Figuras(String descripcion, String instrucciones, String garantía) {
-        this.descripcion = descripcion;
+    public Figuras(String desc, String instrucciones, String garantía, String titulo, Color color, String descripcion, String editorial, int tamano, int puntuacion, Personas usuario) {
+        super(titulo, color, descripcion, editorial, tamano, puntuacion, usuario);
+        this.desc = desc;
         this.instrucciones = instrucciones;
         this.garantía = garantía;
     }
 
-    public String getDescripcion() {
-        return descripcion;
+    
+
+    public String getDesc() {
+        return desc;
     }
 
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
+    public void setDesc(String descripcion) {
+        this.desc = descripcion;
     }
 
     public String getInstrucciones() {
@@ -51,7 +56,12 @@ public class Figuras extends Articulos {
 
     @Override
     public String toString() {
-        return "Figuras{" + "descripcion=" + descripcion + ", instrucciones=" + instrucciones + ", garant\u00eda=" + garantía + '}';
+        return super.getTitulo();
+    }
+
+    @Override
+    int num() {
+        return super.getPuntuacion();
     }
     
     

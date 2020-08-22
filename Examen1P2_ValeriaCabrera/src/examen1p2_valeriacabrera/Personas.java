@@ -11,10 +11,10 @@ import java.util.ArrayList;
  *
  * @author Usuario
  */
-public class Personas {
+public abstract class Personas {
     
     private int id;
-    private String nombre;
+    String nombre;
     private int edad;
     private String sexo;
     private String estado;
@@ -104,6 +104,6 @@ public class Personas {
         return nombre;
     }
     
-    
+    abstract String rol();
     
 }

@@ -52,8 +52,15 @@ public class Gerente extends Personas {
 
     @Override
     public String toString() {
-        return "Gerente{" + "usuario=" + usuario + ", password=" + password + ", cargo=" + cargo + '}';
+        return super.getNombre();
     }
+
+    @Override
+    String rol() {
+        return cargo;
+    }
+    
+    
     
     
     
